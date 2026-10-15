@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ja">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>WORD QUEST — 英単語で、次の世界へ。</title><link rel="stylesheet" href="style.css"><script src="sketch.js" defer></script></head>
+<body>
+<header><a class="brand" href="index.html"><span class="brand-icon">W<span>✦</span></span> WORD QUEST</a><span class="header-note">毎日ちょっと。未来が変わる。</span><span class="level">HIGH SCHOOL / 高校英語</span></header>
+<main>
+<section class="intro"><div><p class="eyebrow">YOUR DAILY VOCAB ADVENTURE</p><h1>言葉を集めて、<br>世界をひろげよう<span>。</span></h1><p class="subtitle">1回10問の小さな冒険。まちがいも、次の一歩になる。</p></div><div class="orbit" aria-hidden="true"><div class="orbit-ring"></div><span class="star s1">✦</span><span class="star s2">✧</span><span class="planet">Aa<span>VOCAB POWER</span></span><span class="orbit-label">LET'S LEVEL UP ↗</span></div></section>
+<div class="vocabulary-toolbar"><button id="open-vocabulary" class="next-button" type="button" aria-haspopup="dialog">単語一覧を見る ↗</button></div>
+<section class="stats" aria-label="学習状況"><div><span class="stat-label">✦ TOTAL SCORE</span><strong id="score">0 <small>pt</small></strong></div><div><span class="stat-label">↗ COMBO</span><strong id="combo">0 <small>連続正解</small></strong></div><div class="progress-stat"><div class="progress-heading"><span class="stat-label" id="round-label">本日のクエスト</span><b id="progress-text">01 / 10</b></div><div class="progress-track"><div id="progress"></div></div><span class="progress-caption" id="completed">0問クリア · あせらず、自分のペースで</span></div></section>
+<div class="game-layout"><section class="quest-card" id="game"><div class="card-top"><span class="pill">● <span id="mode">SPELLING QUEST</span></span><span id="question-number">QUESTION 01</span></div><div class="question"><p id="prompt">この意味にあう英単語は？</p><h2 id="meaning"></h2><div class="word-meta"><span id="part"></span><span>高校 基礎〜標準</span></div><p class="example" id="example"></p></div><div class="hint-row"><button id="hint" class="hint-button">✧ ヒントを見る</button><span id="hint-text">思い出せなくても大丈夫。</span></div><form id="answer-form"><label for="answer">YOUR ANSWER <span>英単語を入力</span></label><div class="input-row"><input id="answer" type="text" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="ここに答えを入力…" required><button class="primary" id="check" type="submit">答え合わせ <span>↗</span></button></div></form><div id="feedback" role="status" aria-live="polite"></div><div class="navigation"><button id="back" class="text-button">← 戻る</button><span>Enter で答え合わせ</span><button id="next" class="next-button">次へ →</button></div></section>
+<aside><section class="guide"><span class="mini-label">TODAY'S MISSION</span><h3>昨日の自分を、<br>ひとつ超えよう。</h3><div class="mission-art" aria-hidden="true">⚑<span>✦</span></div><p>意味から英単語を思い出そう。<br>10問クリアでクエスト達成！</p><div class="guide-rule"><span>01</span><p>正解すると <b>+100 pt</b></p></div><div class="guide-rule"><span>02</span><p>連続正解で <b>ボーナス</b></p></div><div class="guide-rule"><span>03</span><p>苦手な単語は <b>もう一度</b></p></div></section><section class="tip"><span>✳ LEARNING TIP</span><p>単語だけでなく、例文の場面も<br>思い浮かべると覚えやすいよ。</p></section></aside></div>
+<section id="results" class="results" hidden></section>
+<footer><span>SMALL STEPS, BIG POSSIBILITIES.</span><span>今日の10問が、明日の自信に。</span></footer>
+<details class="review"><summary>レビュー項目・遊び方</summary><ul><li>日本語の意味に合う英単語を入力して、答え合わせ（Enterも使用可）。</li><li>上部にスコア・連続正解・進行状況、問題の左下に解答欄。</li><li>ヒントは先頭の文字を表示。ヒント使用時の正解は50点。</li><li>初回の答えを採点。戻っても点数は重複しません。</li><li>次へ・戻るで移動。未解答は「次へ」で答えを確認できます。</li><li>終了後は間違えた単語だけを復習できます。</li></ul></details>
+</main>
+<dialog id="vocabulary-dialog" aria-labelledby="vocabulary-title">
+<div class="vocabulary-heading"><div><span class="mini-label">WORD COLLECTION</span><h2 id="vocabulary-title">単語一覧</h2></div><form method="dialog"><button class="next-button" aria-label="単語一覧を閉じる">閉じる ×</button></form></div>
+<p class="vocabulary-description">クエストに登場する全10語。意味と例文を確認しよう。</p>
+<ol id="vocabulary-list" class="vocabulary-list"></ol>
+</dialog>
+</body></html>
